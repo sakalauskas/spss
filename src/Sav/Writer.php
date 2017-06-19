@@ -83,9 +83,8 @@ class Writer
                 $var = new Variable($var);
             }
 
-            //$shortName = strtoupper(substr($var->name, 0, 8));
-            $shortName = strtoupper($var->name);
-            
+            $shortName = strtoupper(substr($var->name, 0, 8));
+
             $variable = new Record\Variable();
             $variable->name = $shortName;
             $variable->width = $var->width;
@@ -119,8 +118,8 @@ class Writer
                     foreach ($var->values as $key => $value) {
                         $valueLabel->vars = [$idx + 1];
                         $valueLabel->data[] = [
-                            'value' => $var->width > 0 ? Buffer::stringToDouble($key) : $key,
-                            'label' => $value
+                            'value' => $value['value'],
+                            'label' => $value['label']
                         ];
                     }
                     $this->valueLabels[] = $valueLabel;
