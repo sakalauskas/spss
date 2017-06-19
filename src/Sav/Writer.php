@@ -83,8 +83,9 @@ class Writer
                 $var = new Variable($var);
             }
 
-            $shortName = strtoupper(substr($var->name, 0, 8));
-
+            //$shortName = strtoupper(substr($var->name, 0, 8));
+            $shortName = strtoupper($var->name);
+            
             $variable = new Record\Variable();
             $variable->name = $shortName;
             $variable->width = $var->width;
