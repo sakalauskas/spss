@@ -12,13 +12,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist tiamo/spss "*"
+composer require sakalauskas/spss 
 ```
 
 or add
 
 ```
-"tiamo/spss": "*"
+"sakalauskas/spss": "^2.0"
 ```
 
 to the require section of your `composer.json` file.
@@ -52,7 +52,7 @@ $writer = new \SPSS\Writer([
         [
                 'name'     => 'VAR1',
                 'width'    => 0,
-                'decimals' => 0
+                'decimals' => 0,
                 'format'   => 5,
                 'columns'  => 50,
                 'align'    => 1,
