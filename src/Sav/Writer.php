@@ -118,8 +118,8 @@ class Writer
                     foreach ($var->values as $key => $value) {
                         $valueLabel->vars = [$idx + 1];
                         $valueLabel->data[] = [
-                            'value' => $value['value'],
-                            'label' => $value['label']
+                            'value' => $key,
+                            'label' => $label
                         ];
                     }
                     $this->valueLabels[] = $valueLabel;
