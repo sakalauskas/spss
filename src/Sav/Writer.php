@@ -115,7 +115,7 @@ class Writer
                     ];
                 } else {
                     $valueLabel = new Record\ValueLabel();
-                    foreach ($var->values as $key => $value) {
+                    foreach ($var->values as $key => $label) {
                         $valueLabel->vars = [$idx + 1];
                         $valueLabel->data[] = [
                             'value' => $key,
